@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  php:
+    image: php:8.2-cli
+    volumes:
+      - ./src:/var/www/html/src
+      - ./tests:/var/www/html/tests
+    working_dir: /var/www/html/tests
+    command: php main.php
